@@ -7,4 +7,8 @@
 
 {% block content %}
     <div class="correct"> Choice is correct </div>
+<form action="/quiz/{{ question.id }}/">
+    <input type="submit" value="Next">
+</form>
+
 {% endblock %}

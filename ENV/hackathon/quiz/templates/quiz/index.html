@@ -3,17 +3,29 @@
 {% load staticfiles %}
 
 {% block head %}
+    <link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.10.7/css/jquery.dataTables.css">
+
+<!-- DataTables -->
+<script type="text/javascript" charset="utf8" src="http://cdn.datatables.net/1.10.7/js/jquery.dataTables.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#fronttable').DataTable();
+        });
+    </script>
 {% endblock %}
 
 {% block content %}
 
-{% if latest_question_list %}
-<ul>
+   <table id="fronttable" class="table">
+      <thead><tr> <th> Question name</th></tr></thead>
+      <tbody>
     {% for question in latest_question_list %}
-    <li><a href="/quiz/{{ question.id }}/">{{ question.question_text }}</a></li>
-    {% endfor %}
-</ul>
-{% else %}
-<p>No polls are available.</p>
-{% endif %}
+      	<tr>
+            <td>
+                <a href="/quiz/{{ question.id }}/">{{ question.question_text }}</a>
+        </td>
+      	</tr>
+          {% endfor %}
+      </tbody>
+      </table>
 {% endblock %}

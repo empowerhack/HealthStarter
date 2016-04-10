@@ -14,17 +14,17 @@
 /* Basic Theme */
 
 [data-accordion] {
-    line-height: 1;
+    line-height: 1.4;
 }
 
 [data-control] {
-    border-top: 1px solid #eee;
+    border-top: 1px solid #fdfdfd;
     padding: 10px;
     padding-left: 35px;
 }
 
 [data-content] > * {
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #fdfdfd;
     padding: 10px;
 }
 
@@ -42,7 +42,7 @@
     content: "";
     position: absolute;
     right: 10px;
-    top: 30px;
+    top: 25px;
     font-size: 25px;
     font-weight: 200;
     color: #444;

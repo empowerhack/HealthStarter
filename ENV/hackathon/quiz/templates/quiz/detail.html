@@ -3,23 +3,24 @@
 {% load staticfiles %}
 
 {% block head %}
- <link rel="stylesheet" type="text/css" href="{% static 'quiz/quiz.css' %}"/>
+<link rel="stylesheet" type="text/css" href="{% static 'quiz/quiz.css' %}"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 {% endblock %}
 
 {% block content %}
 
 <div class="site-desc-quiz">
-                    <p>{{ question.question_text }}</p>
-                </div>
+    <p>{{ question.question_text }}</p>
+</div>
 
 {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
-
-<form action="{% url 'quiz:vote' question.id %}" method="post">
-{% csrf_token %}
-{% for choice in question.choice_set.all %}
-    <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}" />
-    <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br />
-{% endfor %}
-<input type="submit" value="Vote" />
+<br>
+<form class="quiz-form" action="{% url 'quiz:vote' question.id %}" method="post">
+    {% csrf_token %}
+    {% for choice in question.choice_set.all %}
+    <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}"/>
+    <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br/>
+    {% endfor %}
+    <input class="pull-right btn btn-success quiz-button" type="submit" value="Submit"/>
 </form>
 {% endblock %}
