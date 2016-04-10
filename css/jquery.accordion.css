@@ -14,7 +14,7 @@
 /* Basic Theme */
 
 [data-accordion] {
-    line-height: 1;
+    line-height: 1.4;
 }
 
 [data-control] {
@@ -42,7 +42,7 @@
     content: "";
     position: absolute;
     right: 10px;
-    top: 20px;
+    top: 25px;
     font-size: 25px;
     font-weight: 200;
     color: #444;
