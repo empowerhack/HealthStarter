@@ -221,9 +221,30 @@ ol {
 header {
     background-image: url('../img/healthstarter.jpg');
     background-size: 120% auto;
+        background-position: 100% 70%;
+
     /*min-height: 200px;*/
     position: relative;
 
+}
+
+.button-link {
+    border-radius: 5px;
+    border: 2px solid #FD2D52;
+    color: #FD2D52;
+    padding: 10px 5px;
+    margin: 10px auto;
+    text-align: center;
+
+}
+
+.warning {
+    background-color: #FD2D52;
+    color: #fff;
+}
+
+.warning > * {
+    color: #fff
 }
 
 .site-desc {
@@ -232,6 +253,7 @@ header {
     width: 100%;
     margin: 0px;
     padding: 2px 0px;
+    border-bottom: 2px solid #f3f3f3;
 }
 
 .site-desc p {
