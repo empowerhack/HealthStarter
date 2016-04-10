@@ -1,17 +1,20 @@
 {% extends 'quiz/base.html' %}
-    {% load staticfiles %}
+
+{% load staticfiles %}
 
 {% block head %}
- <link rel="stylesheet" type="text/css" href="{% static 'quiz/test.css' %}"/>
+ <link rel="stylesheet" type="text/css" href="{% static 'quiz/quiz.css' %}"/>
 {% endblock %}
 
 {% block content %}
 
-<h1>{{ question.question_text }}</h1>
+<div class="site-desc-quiz">
+                    <p>{{ question.question_text }}</p>
+                </div>
 
 {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
 
-<form action="{% url 'quiz:vote' question.id %}" method="post">
+<form action="" method="post">
 {% csrf_token %}
 {% for choice in question.choice_set.all %}
     <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}" />

@@ -20,6 +20,8 @@
         <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
         <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
         <link href='https://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css'>
+{% block head %}
+{% endblock %}
 
 
     </head>
@@ -28,6 +30,9 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
+        <br>
+        <br>
+        <br>
         <!-- Add your site or application content here -->
         <div class="main-content">
 {% block content %}
@@ -36,7 +41,6 @@
 
         <footer>
 
-            <p> This was developed at EmpowerHack LDN for ... by ... </p>
         </footer>
 
         <!-- <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script> -->
