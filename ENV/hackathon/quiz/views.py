@@ -3,7 +3,6 @@ from .models import Question, Choice
 from django.shortcuts import get_object_or_404, render
 from django.core.urlresolvers import reverse
 
-# Create your views here.
 def index(request):
     latest_question_list = Question.objects.order_by('-pub_date')[:5]
     context = {'latest_question_list': latest_question_list}
@@ -25,7 +24,7 @@ def vote(request, question_id):
         # Redisplay the question voting form.
         return render(request, 'quiz/detail.html', {
             'question': question,
-            'error_message': "You didn't select a choice.",
+            'error_message': "You didn't select a choice. Numpty.",
         })
     else:
         if selected_choice.correct_choice:

@@ -17,3 +17,8 @@ class Choice(models.Model):
     correct_choice = models.BooleanField(default=0)
     def __str__(self):
         return self.choice_text
+
+class Tip(models.Model):
+    tip = models.CharField(max_length=200)
+    def __str__(self):
+        return self.choice_text
