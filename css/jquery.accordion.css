@@ -37,12 +37,12 @@
     content: "";
     position: absolute;
     right: 10px;
-    top: 12px;
+    top: 30px;
     font-size: 25px;
     font-weight: 200;
     color: #444;
     height: 15px;
-    width: 24px;
+    width: 50px;
     background: url('../images/down.png') center center no-repeat;
     background-size: 50%;
 }
