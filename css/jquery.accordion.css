@@ -17,9 +17,14 @@
     line-height: 1;
 }
 
-[data-control],
+[data-control] {
+    border-top: 1px solid #eee;
+    padding: 10px;
+    padding-left: 35px;
+}
+
 [data-content] > * {
-    border-bottom: 1px solid #888;
+    border-bottom: 1px solid #eee;
     padding: 10px;
 }
 

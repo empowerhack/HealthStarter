@@ -104,6 +104,8 @@ textarea {
     margin-top: -22px;
     font-size: 0.9em;
     box-shadow: 0px 0px 5px #ddd;
+    background-color: #fff;
+    margin-bottom: 50px;
 }
 
 .accordion-container {
@@ -133,13 +135,13 @@ textarea {
 
 h1.pageTitle {
     font-family: 'Dosis', sans-serif;
-    padding: 80px 0px 0px 20px;
+    padding: 80px 0px 50px 20px;
     font-size: 3em;
 }
 
 header {
-    background-image: url(http://placekitten.com/900/400);
-    min-height: 200px;
+    background-image: url(http://placekitten.com/900/200);
+    /*min-height: 200px;*/
     position: relative;
 }
 
@@ -162,9 +164,27 @@ h1 {
 }
 
 
+body {
+    background-image: url('../img/agsquare.png');
+}
 
+/*h2 {
+    color: #FF4C14;
+    font-family: 'Dosis';
+}
+*/
 
+.accordion.open [data-control] {
+    background-color: #FF4C14;
+    -webkit-transition: background-color 0.5s; /* Safari */
+    transition: background-color 0.5s;
+}
 
+.accordion.open h2 {
+    color: #fff;
+    -webkit-transition: color 0.5s; /* Safari */
+    transition: color 0.5s;
+}
 
 
 
