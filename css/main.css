@@ -16,6 +16,11 @@ html {
     line-height: 1.4;
 }
 
+* {
+    font-family: Roboto;
+    color: #555;
+}
+
 @import url(https://fonts.googleapis.com/css?family=Dosis:400,500);
 
 /*
@@ -121,37 +126,43 @@ textarea {
     color: #FF4C14;
 }
 
-.yellow-green {
-
-}
-
-.yellow-green {
-
-}
-
-.yellow-green {
-
+.pink {
+    color: #FD2D52;
 }
 
 h1.pageTitle {
     font-family: 'Dosis', sans-serif;
-    padding: 80px 0px 50px 20px;
     font-size: 3em;
+    margin: 10px;
+    color: #fff;
+}
+
+.pageHeadingText {
+    padding: 60px 20px 60px 20px;
+}
+
+.subHeading {
+    background-color: rgba(40, 40, 40, 0.87);
+    font-size: 1em;
+    color: #fff;
+    display: inline;
+    margin: 10px;
+    padding: 10px;
 }
 
 header {
-    background-image: url(http://placekitten.com/900/200);
+    background-image: url('../img/healthstarter.jpg');
     /*min-height: 200px;*/
     position: relative;
+
 }
 
 .site-desc {
-    background-color: rgba(40, 40, 40, 0.7);
-    color: rgba(255, 255, 255, 0.87);
-    position: absolute;
-    bottom: 0px;
+    background-color: #E3FFFF;
+    color: #ddd;
     width: 100%;
     margin: 0px;
+    padding: 0px;
 }
 
 .site-desc p {
@@ -174,8 +185,12 @@ body {
 }
 */
 
+h2 {
+    margin: 0.5em;
+}
+
 .accordion.open [data-control] {
-    background-color: #FF4C14;
+    background-color: #FD2D52;
     -webkit-transition: background-color 0.5s; /* Safari */
     transition: background-color 0.5s;
 }
@@ -184,6 +199,22 @@ body {
     color: #fff;
     -webkit-transition: color 0.5s; /* Safari */
     transition: color 0.5s;
+}
+
+.quiz-CTA {
+    background-color: pink;
+    padding: 30px 0px;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    text-decoration: none;
+    color: #fff;
+    font-size: 2em;
+}
+
+footer {
+    text-align: center;
+    font-size: 0.8em;
 }
 
 
