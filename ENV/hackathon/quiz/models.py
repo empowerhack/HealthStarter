@@ -2,6 +2,8 @@ from __future__ import unicode_literals
 
 from django.db import models
 
+from django.forms import ModelForm
+
 # Create your models here.
 
 class Question(models.Model):
@@ -21,6 +23,12 @@ class Choice(models.Model):
 class Tip(models.Model):
 
     tip = models.CharField(max_length=200)
+    location = models.CharField(max_length=200)
 
     def __str__(self):
         return self.tip
+
+class TipForm(ModelForm):
+    class Meta:
+        model = Tip
+        fields = ['tip', 'location']

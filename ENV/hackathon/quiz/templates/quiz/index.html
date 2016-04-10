@@ -17,7 +17,9 @@
 {% block content %}
 
    <table id="fronttable" class="table">
-      <thead><tr> <th> Question name</th></tr></thead>
+      <thead><tr> <div class="site-desc-quiz">
+    <p>Question name</p>
+</div></tr></thead>
       <tbody>
     {% for question in latest_question_list %}
       	<tr>
