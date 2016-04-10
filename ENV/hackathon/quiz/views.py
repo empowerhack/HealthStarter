@@ -28,7 +28,11 @@ def vote(request, question_id):
             'error_message': "You didn't select a choice.",
         })
     else:
-        selected_choice.votes += 1
+        if selected_choice.correct_choice:
+                return render(request, 'quiz/correct.html', {'question': question})
+        else:
+                return render(request, 'quiz/incorrect.html', {'question': question})
+
         selected_choice.save()
         # Always return an HttpResponseRedirect after successfully dealing
         # with POST data. This prevents data from being posted twice if a
