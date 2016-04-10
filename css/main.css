@@ -228,11 +228,24 @@ header {
 
 }
 
+.accordion.open {
+    border-bottom: 3px solid #eee;
+    padding-bottom: 20px;
+}
+
+.warning ul {
+    color: #fff;
+}
+
+.link-container {
+    margin: 1px;
+}
+
 .button-link {
     border-radius: 5px;
     border: 2px solid #FD2D52;
     color: #FD2D52;
-    padding: 10px 5px;
+    padding: 10px 10px;
     margin: 10px auto;
     text-align: center;
 
@@ -266,6 +279,14 @@ header {
     position: fixed;
     bottom: 0px;
     height: 20px;
+}
+
+p.progresstext {
+    color: #888;
+    margin: 0px;
+    position: relative;
+    top: -20px;
+    height: 0px
 }
 
 .progress {
@@ -329,6 +350,7 @@ em {
 footer {
     text-align: center;
     font-size: 0.8em;
+    margin-bottom: 50px;
 }
 
 
