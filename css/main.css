@@ -142,10 +142,34 @@ textarea {
     box-shadow: 0px 0px 5px #ddd;
     background-color: #fff;
     margin-bottom: 50px;
+
 }
+
+/*iframe {
+        width: 1px;
+        min-width: 100%;
+        *width: 100%;
+    }*/
 
 .accordion-container {
     /*padding: 0px 20px;*/
+}
+
+.gradient {
+    height: 40px;
+    position: fixed;
+    bottom: 19px;
+    background-color: #fff;
+    z-index: 0;
+    display: block;
+    width: 100%;
+
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&1+0,0+100;White+to+Transparent */
+background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(255,255,255,1) 80%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 80%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 80%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
+
 }
 
 
@@ -230,7 +254,6 @@ header {
 
 .accordion.open {
     border-bottom: 3px solid #eee;
-    padding-bottom: 20px;
 }
 
 .warning ul {
@@ -351,6 +374,13 @@ footer {
     text-align: center;
     font-size: 0.8em;
     margin-bottom: 50px;
+}
+
+div.form-container {
+    background-color: #eee;
+    padding-top: 30px;
+    margin-top: 20px;
+    padding-bottom: 20px;
 }
 
 
