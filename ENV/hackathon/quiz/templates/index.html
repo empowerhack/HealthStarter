@@ -2,9 +2,7 @@
 <html class="no-js" lang="">
     <head>
         <meta charset="utf-8">
-
         {% load staticfiles %}
-
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title></title>
         <meta name="description" content="">
@@ -13,9 +11,9 @@
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
 
-        <link rel="stylesheet" href="{% static 'normalize.css' %}">
-        <link rel="stylesheet" href="{% static 'main.css' %}">
-        <link rel="stylesheet" type="text/css" href="{% static 'jquery.accordion.css' %}">
+        <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+        <link rel="stylesheet" href="{% static 'css/main.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/jquery.accordion.css' %}">
         <script src="{% static 'vendor/modernizr-2.8.3.min.js' %}"></script>
         <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
          <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
@@ -24,7 +22,7 @@
 
 
     </head>
-        <body>
+    <body>
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -44,7 +42,7 @@
                 </div>
             </header>
 
-
+            
             <div class="accordion-container">
                 <div>
                     <h1> 1. Baby Health Care </h1>
@@ -65,33 +63,74 @@
                                 </ol>
                             </div>
                             <div class="look-for pull-left">
-                                <img src="img/baby-icon-2.png" class="baby-icon icon"/>
+                                <img src="{% static 'img/baby-icon-2.png' %}" class="baby-icon icon"/>
                                 <h3> If the baby has nappy rash </h3>
                                 <p> Clean the skin gently, dry it and apply cream that prevent and treat nappy rash (make sure you do not contaminate the cream, always use cream with clean gloves and bring the cream on your hand wrist and apply it from there to the baby) </p>
                             </div>
-                            <div class="warning">
+                            <div class="warning pull-left">
+                                <img src="{% static 'img/exclamation-white-icon.png' %}" class="icon"/>
                                 <h3> Redness could also be a sign of nappy thrush </h3>
-                                <p> Nappy Thrush is a fungal infection caused by a yeast fungus called Candida albicans. It is associated with the oral thrush (check baby’s mouth!) and needs treatment! ->Refer! </p>
+                                <p> Nappy Thrush is a fungal infection caused by a yeast fungus called Candida albicans. It is associated with the oral thrush (check baby’s mouth!) and needs treatment! Refer! </p>
                             </div>
                             <div class="pull-left">
-                                <img src="img/eye-icon-2.png" class="icon"/>
-                                <h3> Observe: </h3>
+                                <img src="{% static 'img/eye-icon-2.png' %}" class="icon"/>
+                                <h3> Observe: </h3>   
                                 <ol>
                                     <li> <em>Newborns:</em><br/> Always look at new-born’s umbilicus! Refer to the doctor if it is red or draining pus! </li>
                                     <li> <em>Stool:</em><br/>  Observe stool! Refer if you see blood! </li>
                                     <li> <em> Urine:</em><br/>  Always observe if there is urine in the nappy if you only see stool ask the mum when the child pass urine last time. It is important that children urinate several times per day! Make sure it drinks enough if it did not pass urine </li>
                                 </ol>
                             </div>
-                            <div>
-                                <p> http://raisingchildren.net.au/articles/nappy_changing_video.html
-                                http://raisingchildren.net.au/articles/nappy_changing_video.html </p>
+                            <div class="link-container">
+                            <a href="http://raisingchildren.net.au/articles/nappy_changing_video.html" class="button-link">
+                                Watch a Video
+                                (Multiple Languages)
+                            </a>
+                            </div>
+
+                            <div class="form-container">
+                                <form class="pure-form pure-form-aligned">
+                                    <fieldset>
+                                        
+
+                                        <div class="pure-control-group">
+                                            <label for="foo">Add your knowledge or ask a question</label>
+                                            <textarea class="pure-input-1-2" placeholder="Add your knowledge or ask a question"></textarea>
+                                        </div>
+
+                                        <div class="pure-control-group">
+                                            <label for="name">Name</label>
+                                            <input id="name" type="text" placeholder="Username">
+                                        </div>
+
+                                        <div class="pure-control-group">
+                                            <label for="email">Email Address</label>
+                                            <input id="email" type="email" placeholder="Email Address">
+                                        </div>
+
+                                        <div class="pure-controls">
+                                            <label for="option-two" class="pure-radio">
+                                                <input id="option-two" type="radio" name="optionsRadios" value="option1" checked>
+                                                This is a Content Suggestion
+                                            </label>
+
+                                            <label for="option-three" class="pure-radio">
+                                                <input id="option-three" type="radio" name="optionsRadios" value="option2">
+                                                This is a Question
+                                            </label>
+                                            <br/>
+
+                                            <button type="submit" class="pure-button pure-button-primary">Submit</button>
+                                        </div>
+                                    </fieldset>
+                                </form>
                             </div>
                         </div>
                     </div>
                     <div class="accordion" data-accordion>
                        <div data-control class="section-title"><h2>1.2 Wash the baby/ Skin care</h2></div>
-                       <div data-content>
-                            <p> It is a great opportunity to do the basic body hygiene efforts in the child friendly space when you are anyway supporting mothers to change nappy! Apply your knowledge; observe the child, its skin condition and well- being closely. </p>
+                       <div data-content> 
+                            <p> It is a great opportunity to do the basic body hygiene efforts in the child friendly space when you are anyway supporting mothers to change nappy! Apply your knowledge; observe the child, its skin condition and well-being closely. </p>
                             <div>
                                 <ol>
                                     <li> Only undress the baby in warm environment. Take off all clothes except their vest and nappy. </li>
@@ -99,11 +138,13 @@
                                     <li> Use a fresh part of cloth to clean around the baby's mouth and ears, but not inside them. Wash the rest of the baby's face, neck and hands in the same way and dry them gently with the towel. Focus on cleaning skin folds, wash and dry them carefully. </li>
                                 </ol>
                             </div>
-                            <div class="remember">
+                            <div class="remember  pull-left">
+                            <img src="{% static 'img/baby-icon-2.png' %}" class="baby-icon icon"/>
                                 <h3> Keep the baby clean </h3>
                                 <p> Washing the babies’ skin folds prevents redness and rash and it should be done once a day (genital area every time if you change nappy) </p>
                             </div>
-                            <div class="observe">
+                            <div class="observe pull-left">
+                                <img src="{% static 'img/eye-icon-2.png' %}" class="icon"/>
                                 <h3> Look at the baby's skin </h3>
                                 <p> Always observe the skin for jaundice, rash, pustules redness or injuries. Refer the child if you observe any anomalies </p>
                             </div>
@@ -111,11 +152,11 @@
                     </div>
                     <div class="accordion" data-accordion>
                         <div data-control class="section-title"> <h2>1.3 Pregnant women </h2></div>
-                        <div data-content>
+                        <div data-content> 
                             <p> Pregnant women need special care. They are in a special situation as their body is challenged with many changes. Pregnant women need extra love and support of her family and community droning pregnancy, whether she is married and already has children, or pregnant for the first time. </p>
                             <div>
                                 <ol>
-                                    <li> <em>Comfort her</em> if she is ill tired, or afraid. As women’s bodies change during pregnancy, their feelings often change too.
+                                    <li> <em>Comfort her</em> if she is ill tired, or afraid. As women’s bodies change during pregnancy, their feelings often change too. 
                                     </li>
                                     <li> <em> Help her </em>with daily task so that she does not have to lift or carry heavy things.
                                     </li>
@@ -125,7 +166,8 @@
                                     <li> She needs to avoid sitting or standing for too long. She feels better if she can lie down and rest for a few minutes when she is sleepy or tired. Resting often is good for a pregnant woman. </li>
                                 </ol>
                             </div>
-                            <div class="remember">
+                            <div class="remember pull-left">
+                                <img src="{% static 'img/medicine-icon-2.png' %}" class="baby-icon icon"/>
                                 <h3> Keep her healthy </h3>
                                 <p> A pregnant woman needs to eat enough food every day, especially foods rich in iron, such as meat, fish, chicken, eggs, beans, peas, and leafy green vegetables. Make sure she always gets an extra portion of food. She should also take folic acid and may need to take other vitamins, therefore advise her to discuss her needs with a health person as soon as possible. </p>
                             </div>
@@ -147,7 +189,8 @@
                                     <li> Introduce nutritionally-adequate and safe complementary (solid) foods at 6 months together with continued breastfeeding up to 2 years of age or beyond </li>
                                 </ol>
                             </div>
-                            <div class="observe">
+                            <div class="observe pull-left">
+                                <img src="{% static 'img/eye-icon-2.png' %}" class="icon"/>
                                 <h3> If you hear that a child is crying or you observe the child is restless: </h3>
                                 <p> Look for hunger signs of the baby (moving his/her head searching for the breast, sucking on the lips, sucking movements with the mouth, licking his own lips).</p>
                                 <ul>
@@ -155,30 +198,32 @@
                                     <li> They might not anymore be realizing when the baby is hungry or might not be in the position to breastfeed their child. It is important that you support the mother in such a moment.</li>
                                     <li> Bring her to a quiet place where she can sit relaxed and comfortably. Make sure that the mother is sitting on a low seat with her back straight. </li>
                                     <li>Offer her something to drink </li>
-                                </ul>
+                                </ul> 
                             </div>
-                            <div class="next-steps">
+                            <div class="next-steps pull-left">
+                                <img src="{% static 'img/baby-icon-2.png' %}" class="baby-icon icon"/>
                                 <h3> Remember </h3>
                                 <p> You might have to support the mother to correct positioning of the baby in her arm and attach the baby for breastfeeding as she might just be too exhausted and distressed to attach the baby by herself (use/offer hand rub). </p>
-                                <p>
+                                <p> 
                                 Don’t worry, as soon as the mother feels better she will claim back the lead in the child care again!
                                 </p>
 
                             </div>
                             <div class="remember">
                                 <h3> If you help to attach the baby make sure that </h3>
-                                <ol>
+                                <ol> 
                                     <li>The infant’s head and body is straight </li>
-                                    <li>The baby is facing her breast, with the infant’s nose opposite her nipple
+                                    <li>The baby is facing her breast, with the infant’s nose opposite her nipple 
                                     infant’s body is close to her body </li>
                                     <li>The mother is supporting infant’s whole body, not just the neck and the baby’s shoulders</li>
                                 </ol>
                             </div>
 
 
-                            <div class="remember">
+                            <div class="remember pull-left">
+                                <img src="{% static 'img/baby-icon-2.png ' %}" class="baby-icon icon"/>
                                 <h3> If the baby does not attach itself </h3>
-                                <ol>
+                                <ol> 
                                     <li>Touch her infant’s lips with her nipple </li>
                                     <li>wait until her infant’s mouth is open wide  </li>
                                     <li>Move her infant quickly onto her breast, aiming the infant’s lower lip well below the nipple (you may ask the mum to express a drop of milk to facilitate the baby to get the taste of the milk)</li>
@@ -187,7 +232,7 @@
 
                             <div class="remember">
                                 <h3>If the child does not show any interest in breastfeeding </h3>
-                                <p> Check the mouth- maybe the child has oral thrush! </p>
+                                <p> Check the mouth- maybe the child has oral thrush! </p> 
                             </div>
                         </div>
                     </div>
@@ -204,9 +249,10 @@
                             <div>
                                 <p> Hand-washing is an important factor relating to the spreading of infection, not just for children but also for adult of all ages. </p>
                             </div>
-                            <div class="warning">
+                            <div class="warning pull-left">
+                                <img src="{% static 'img/exclamation-white-icon.png' %}" class="icon"/>
                                 <h3> Advise to wash hands with soap and water or rub hands with antiseptic agent </h3>
-                                <p>
+                                <p>  
                                     <ul>
                                         <li> after going to the toilet </li>
                                         <li> after changing nappy </li>
@@ -217,12 +263,14 @@
                                     </ul>
                                 </p>
                             </div>
-                            <div class="remember">
+                            <div class="remember pull-left">
+                                <img src="{% static 'img/hygiene-icon-2.png' %}" class="hygiene-icon icon"/>
                                 <h3> Remember </h3>
                                 <p> Keep nails short and clean and discourage nail biting.
                                     The nails and nail beds offer a perfect environment for germs to live and breed. Nail biting facilitates the transfer of germs to the mouth which can causes diseases.  </p>
                             </div>
-                            <div class="remember">
+                            <div class="warning pull-left">
+                                <img src="{% static 'img/exclamation-white-icon.png' %}" class="icon"/>
                                 <h3> Warning </h3>
                                 <p> If you are at risk to be contaminated with body fluids such as stool, urine, blood, runny nose (e.g when changing nappy) always wear gloves! After removing the glove you must use hand rub!  </p>
                             </div>
@@ -230,19 +278,20 @@
                     </div>
                     <div class="accordion" data-accordion>
                        <div data-control class="section-title"><h2>2.2 Oral hygiene </h2></div>
-                       <div data-content>
+                       <div data-content> 
                             <div class="observe">
                                 <h3> The child does not want to eat or drink? Does the child have pain during food intake? </h3>
                                 <p> Check the gum and throat of the child! Do you observe little wounds, ulcers, white spots or redness? (use a little flash light and wear gloves to check) Ulcers and open sores inside the mouth and lips or the tongue are painful. </p>
                                 <ol>
                                     <li> Provide toothbrush and refer to the health service for oral anti-inflammatory spray.</li>
                                     <li> Organize pain killer (children need to be relieved from pain so that they can eat and drink which is vital for them to stay strong) </li>
-                                    <li> If you have time: wash hand and wear gloves and take a clean, soft cloth wet with salty water and wrap it around your finger and wash the child’s mouth. </li>
+                                    <li> If you have time: wash hand and wear gloves and take a clean, soft cloth wet with salty water and wrap it around your finger and wash the child’s mouth. </li> 
                                 </ol>
                             </div>
-                            <div class="remember">
+                            <div class="remember pull-left">
+                                <img src="{% static 'img/baby-icon-2.png' %}" class="baby-icon icon"/>
                                 <h3> Small infants or newborns up to 4 weeks </h3>
-                                <p>
+                                <p> 
                                     Is the baby crying during breastfeeding or does it refuse to drink?
                                     Check her/his mouth! Can you find white coating?
                                  </p>
@@ -253,14 +302,8 @@
 
                                 <h4> The baby needs referral to the health service to get treatment </h4>
                             </div>
-                            <div class="remember">
-                                <h3> Small infants or newborns up to 4 weeks </h3>
-                                <p>
-                                    Is the baby crying during breastfeeding or does it refuse to drink?
-                                    Check her/his mouth! Can you find white coating?
-                                 </p>
-                            </div>
-                            <div class="treatment">
+                            <div class="treatment pull-left">
+                                <img src="{% static 'img/medicine-icon-2.png' %}" class="baby-icon icon"/>
                                 <h3> Treatment: Treat thrush with nystatin (or gentian violet) four times daily for 7 days  </h3>
                                 <ol>
                                     <li> Wash hands </li>
@@ -268,7 +311,7 @@
                                     <li> Instill nystatin 1ml four times a day, avoid feeding for 20 minutes after medication </li>
                                     <li> If the mother is breastfeeding check mother’s breasts for thrush (or ask her to have a close look if she can see any redness). If it is present, treat with nystatin </li>
                                     <li> Advise mother to wash breasts after feeding.</li>
-                                    <li> If bottle fed then advise the mother to change to cup and spoon
+                                    <li> If bottle fed then advise the mother to change to cup and spoon 
                                     Give pain killer if needed </li>
                                 </ol>
                             </div>
@@ -284,89 +327,47 @@
                     <div class="accordion" data-accordion>
                         <div data-control class="section-title"> <h2>3.1 Regulation of body temperature  </h2> </div>
                         <div data-content>
-                            <div>
+                            <div class="pull-left">
+                                <img src="{% static 'img/temperature-icon-2.png' %}" class="icon"/>
                                 <h3> Temperature of a healthy newborn/child: 36.5- 37.5° (axillary) </h3>
                                 <ol> Signs of fever:
                                     <li> It feels warmer than usual on the touch on their forehead, back or stomach (ask the baby’s mother to compare) </li>
-                                    <li> feeling sweaty or clammy </li>
+                                    <li> feeling sweaty or clammy </li> 
                                     <li> having flushed cheeks </li>
                                     <li> breathing rapidly </li>
                                 </ol>
                             </div>
-                            <div class="refer">
+                            <div class="refer pull-left">
+                                <img src="{% static 'img/eye-icon-2.png' %}" class="icon"/>
                                 <h3> If the baby/child or adult shows signs of fever refer to the health service. </h3>
-                                <p>
-                                    If a young infant has fever, this might mean the infant has a serious bacterial infection. In addition, fever may be the only sign of a serious bacterial infection. Young infants can also respond to infection by dropping their body temperature to below 35.5 °C
+                                <p>  
+                                    If a young infant has fever, this might mean the infant has a serious bacterial infection. In addition, fever may be the only sign of a serious bacterial infection. Young infants can also respond to infection by dropping their body temperature to below 35.5 °C 
                                 </p>
                             </div>
                             <div class="remember">
                                 <h3> Remember </h3>
-                                <ul>
+                                <ul> 
                                     <li> Keep a child or baby always dry and warm. </li>
                                     <li> A baby can't adjust to temperature changes like an adult and lose heat rapidly, nearly 4 times faster than an adult. </li>
                                     <li> A baby can lose huge amount of heat through his/her head. So if it is cold always protect their head. However, keeping the baby too warm is putting them at health risk as well. </li>
                                 </ul>
                             </div>
-                            <div class="remember">
+                            <div class="warning pull-left">
+                                <img src="{% static 'img/exclamation-white-icon.png' %}" class="icon"/>
                                 <h3> Warning </h3>
                                 <p>  If the baby/child is in a very warm environment make sure that you take some clothes off!   </p>
                             </div>
 
-                            <div class="remember">
+                            <div class="remember pull-left">
+                                <img src="{% static 'img/temperature-icon-2.png' %}" class="icon"/>
                                 <h3> Warning </h3>
                                 <p> A baby who is too warm might sweat, has damp hair, flushed or red cheeks, has a heat rash, or breathe rapidly (as if it is panting). Take some clothes off! </p>
                                 <p> A good advice is that you dress your baby in no more than one layer of clothing than an adult is wearing </p>
                                 <p> If new-born is having very low temperature (hypothermia x < 36.5) undress the baby and give it for one hour to the mother’s or father’s chest skin-to skin (kangaroo care). Refer low temperature baby immediately to health service. </p>
                             </div>
 
+                            
 
-
-                        </div>
-                    </div>
-                    <div class="accordion" data-accordion>
-                       <div data-control class="section-title"><h2>2.2 Oral hygiene </h2></div>
-                       <div data-content>
-                            <div class="observe">
-                                <h3> The child does not want to eat or drink? Does the child have pain during food intake? </h3>
-                                <p> Check the gum and throat of the child! Do you observe little wounds, ulcers, white spots or redness? (use a little flash light and wear gloves to check) Ulcers and open sores inside the mouth and lips or the tongue are painful. </p>
-                                <ol>
-                                    <li> Provide toothbrush and refer to the health service for oral anti-inflammatory spray.</li>
-                                    <li> Organize pain killer (children need to be relieved from pain so that they can eat and drink which is vital for them to stay strong) </li>
-                                    <li> If you have time: wash hand and wear gloves and take a clean, soft cloth wet with salty water and wrap it around your finger and wash the child’s mouth. </li>
-                                </ol>
-                            </div>
-                            <div class="remember">
-                                <h3> Small infants or newborns up to 4 weeks </h3>
-                                <p>
-                                    Is the baby crying during breastfeeding or does it refuse to drink?
-                                    Check her/his mouth! Can you find white coating?
-                                 </p>
-
-                                 <p> Oral thrush is a white coating on the baby’s tongue, although there may also be white patches elsewhere in the mouth. This coating may look like curd or cottage cheese and usually cannot be rubbed off easily (if you can rub it off then it is milk not a thrush). </p>
-                                 <p> Oral thrush is a fungal infection in the mouth caused by a yeast fungus called Candida albicans. It is usually harmless and easily treatable. </p>
-                                <p> Babies may be reluctant to feed – or keep detaching from the breast during feeding – if they are sore. </p>
-
-                                <h4> The baby needs referral to the health service to get treatment </h4>
-                            </div>
-                            <div class="remember">
-                                <h3> Small infants or newborns up to 4 weeks </h3>
-                                <p>
-                                    Is the baby crying during breastfeeding or does it refuse to drink?
-                                    Check her/his mouth! Can you find white coating?
-                                 </p>
-                            </div>
-                            <div class="treatment">
-                                <h3> Treatment: Treat thrush with nystatin (or gentian violet) four times daily for 7 days  </h3>
-                                <ol>
-                                    <li> Wash hands </li>
-                                    <li> Wash the child’s mouth with clean soft cloth wrapped around you finger. The cloth should be wet with salt water. </li>
-                                    <li> Instill nystatin 1ml four times a day, avoid feeding for 20 minutes after medication </li>
-                                    <li> If the mother is breastfeeding check mother’s breasts for thrush (or ask her to have a close look if she can see any redness). If it is present, treat with nystatin </li>
-                                    <li> Advise mother to wash breasts after feeding.</li>
-                                    <li> If bottle fed then advise the mother to change to cup and spoon
-                                    Give pain killer if needed </li>
-                                </ol>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -384,7 +385,7 @@
                                 <p>
                                 Therefore, it is needed that you are empowering them to maintain good and safe practices towards their health. Poor hygiene can contribute to diseases and causes maternal and child death. However, it is important to avoid messages, which imply that people are to blame for their own, or their children’s ill health.
                                 </p>
-                                <p>
+                                <p> 
                                 Try to communicate health messages always with a positive and supportive spirit.
                                 </p>
                                 <h4> Thank you for caring </h4>
@@ -393,7 +394,7 @@
                     </div>
                     <div class="accordion" data-accordion>
                        <div data-control class="section-title"><h2>Healthcare is a right, not a priviledge</h2></div>
-                       <div data-content>
+                       <div data-content> 
                             <p> The right to health includes both freedoms and entitlements. </p>
                             <p> <em>Freedoms</em> include the right to control one’s health and body (e.g. sexual and reproductive rights) and to be free from interference (e.g. free from torture and from non-consensual medical treatment and experimentation).
                             </p>
@@ -401,8 +402,8 @@
                             <p> Health policies and programmes have the ability to either promote or violate human rights, including the right to health, depending on the way they are designed or implemented. Taking steps to respect and protect human rights upholds the health sector’s responsibility to address everyone’s health (WHO fact sheet N°323) </p>
                         </div>
                     </div>
-
-
+                    
+                    
                 </div>
             </div>
             <div class="quiz">
@@ -415,25 +416,30 @@
 
         <footer>
 
-            <p> This was developed at EmpowerHack LDN for Terre des hommes by Camille, Nora, Ashley and Eleanor </p>
+            <p> This was developed at <a href="http://empowerhack.io/" >EmpowerHackLDN</a> for <a href="http://www.terredeshommes.org/">Terre des hommes</a> by Camille, Nora, Ashley and Eleanor </p>
         </footer>
 
+<div class="gradient">
+        .
+        </div>
 
-        <div class="progressBar">
+        <div class="progressBar"> 
+            <p class="progresstext"> &nbsp; &nbsp; Progress:</p>
             <div class="progress">
 
             </div>
         </div>
 
-        <!-- <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script> -->
 
+        <!-- <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script> -->
+        
         <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
         <!-- <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script> -->
-        <script src="{% static 'plugins.js' %}"></script>
-        <script src="{% static 'main.js' %}"></script>
+        <script src="{% static 'js/plugins.js' %}"></script>
+        <script src="{% static 'js/main.js' %}"></script>
 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <script type="text/javascript" src="{% static 'jquery.accordion.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/jquery.accordion.js' %}"></script>
         <script type="text/javascript">
             var progress = 0;
 
@@ -444,33 +450,31 @@
             });
 
 
-
-            // function progressPlus() {
-            //     alert("lsjdhf");
-            //     progress += 7;
-            //     $('.progress').css("width:", progress);
-            // }
-
           });
 
+          $("button").click(function(){
+                alert("Work in progress - Watch this space");
+          });
+
+          $(".quiz-CTA").click(function(){
+                alert("Work in progress - Watch this space");
+          });
+
+          
 
 
           $("h2").click(function(){
-                progress += 7;
-                // alert(progress+"%");
-                 // $('.progress').css("width:", progress+"%");
+                progress += 9;
                  $('.progress').width(progress+"%");
 
                  if (progress > 50 ) {
                     $('.quiz-CTA').css("background-color", "#FD2D52");
                  }
-            });
 
-          // $.(".section-title").click(function(){
-          //       alert("lsjdhf");
-          //       var progress += 7;
-          //       $('.progress').css("width:", progress);
-          // }
+                 if (progress > 95 ) {
+                    $('.progress').css("background-color", "#39b54a");
+                 }
+             });
         </script>
 
 
@@ -502,12 +506,14 @@
 
 
         <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='https://www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-29692679-3', 'auto');
+          ga('send', 'pageview');
+
         </script>
     </body>
 </html>
