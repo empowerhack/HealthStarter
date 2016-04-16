@@ -3,23 +3,11 @@
 {% load staticfiles %}
 
 {% block head %}
-    <link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.10.7/css/jquery.dataTables.css">
 {% endblock %}
 
 {% block content %}
 
-   <table id="fronttable" class="table">
-      <thead><tr> <div class="site-desc-quiz">
-    <p>Question name</p>
-</div></tr></thead>
-      <tbody>
-    {% for question in latest_question_list %}
-      	<tr>
-            <td>
-                <a href="/quiz/{{ question.id }}/">{{ question.question_text }}</a>
-        </td>
-      	</tr>
-          {% endfor %}
-      </tbody>
-      </table>
+{% for question in latest_question_list %}
+    <a href="/quiz/{{ question.id }}/">{{ question.question_text }}</a>
+{% endfor %}
 {% endblock %}
