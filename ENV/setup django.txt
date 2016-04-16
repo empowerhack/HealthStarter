@@ -5,9 +5,11 @@ Run:
 
 To setup the virtual machine.
 
-cd into hackathon (first level) and run python manage.py runserver.
+cd into hackathon (first level). 
 
-Go to http://127.0.0.1:8000
+Run: python manage.py runserver
+
+Go to http://127.0.0.1:8000 in your browser. 
 
 And hey presto site should be there.
 
