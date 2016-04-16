@@ -1,0 +1,14 @@
+Download virtualenv.
+
+Run:
+    source bin/activate
+
+To setup the virtual machine.
+
+cd into hackathon (first level) and run python manage.py runserver.
+
+Go to http://127.0.0.1:8000
+
+And hey presto site should be there.
+
+Yell at Ashley if not.
