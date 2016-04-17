@@ -1,0 +1,23 @@
+
+.warning {
+    background-color: #FD2D52;
+    color: #fff;
+    padding: 5px;
+    margin: 5px;
+}
+
+.quiz-questions {
+    padding: 5px;
+}
+
+.quiz-CTA {
+    background-color: #FD2D52;
+    padding: 30px 0px;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    text-decoration: none;
+    color: #fff;
+    font-size: 2em;
+    float: right;
+}

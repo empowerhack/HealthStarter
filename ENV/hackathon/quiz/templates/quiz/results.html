@@ -1,9 +1,21 @@
-<h1>{{ question.question_text }}</h1>
+{% extends 'quiz/base.html' %}
 
-<ul>
-{% for choice in question.choice_set.all %}
-    <li>{{ choice.choice_text }} -- {{ choice.votes }} vote{{ choice.votes|pluralize }}</li>
-{% endfor %}
-</ul>
+{% load staticfiles %}
 
-<a href="{% url 'quiz:detail' question.id %}">Vote again?</a>
+{% block head %}
+{% endblock %}
+
+{% block content %}
+
+<h2>Results</h2>
+
+<p>
+    {{ correct_answers }} correct out of {{ total_choices }}.
+</p>
+
+<!--{% for question in latest_question_list %}
+    <a href="/quiz/{{ question.id }}/">{{ question.question_text }}</a>
+{% endfor %}-->
+
+
+{% endblock %}

@@ -3,11 +3,31 @@
 {% load staticfiles %}
 
 {% block head %}
+        <link rel="stylesheet" href="{% static 'css/quiz.css' %}">
 {% endblock %}
 
 {% block content %}
 
-{% for question in latest_question_list %}
-    <a href="/quiz/{{ question.id }}/">{{ question.question_text }}</a>
-{% endfor %}
+
+
+<h2>Quiz</h2>
+
+
+<div class="question pull-right">
+    <form class="quiz-form" action="/quiz/results" method="post">
+                {% csrf_token %}
+        {% for question in latest_question_list %}
+        <div class="warning">
+                {{ question.question_text }}
+        </div>
+                <div class="quiz-questions">
+        {% for choice in question.choice_set.all %}
+            <input type="radio" name="{{ question.id }}" id="choice{{ forloop.counter }}" value="{{ choice.id }}"/>
+            <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br/>
+        {% endfor %}
+            </div>
+        {% endfor %}
+        <input class="quiz-CTA" type="submit" value="Submit"/>
+    </form>
+</div>
 {% endblock %}
